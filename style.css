@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    display: flex;
+    
+}
+.left{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+}
+.nav{
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.lravr{
+    display: flex;
+    align-items: center;
+    
+}
+.lnavr a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+.lnavr a:hover {
+    text-decoration: underline;
+    
+}
+.lnavr i{
+    color: royalblue;
+    size: 30px;
+}
+.left .text-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.text-center h1{
+    font-size: 90px;
+    font-weight: 600;
+    position: relative;
+}
+.text-center h1::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 8px;
+    bottom: 0;
+    background-color: black;
+    left: 0;
+   
+
+}
+.text-center h1:hover::after{
+    animation-name: lineanimation;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+@keyframes lineanimation{
+    0%{
+        width: 0%;
+        left: 0%;
+    }
+    50%{
+        width: 100%;
+        left: 0%;
+    }
+    100%{
+        width: 0%;
+        left: 100%;
+    }
+}
+.text-center p{
+    opacity: .6;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.text-center a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: .6;
+}
+
+.right{
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+.rtop{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+.rbottom{
+    width: 100%;
+    height: 50%;
+    background-image: url(./assets/amy-earl-5srWPwjeIkc-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all ease 1s;
+    cursor: pointer;
+   
+}
+.rbottom:hover{
+    scale: 1.2;
+}
+.rtop1{
+    height: 100%;
+    width: 55%;
+    background-image: url(./assets/annie-spratt-fbAnIjhrOL4-unsplash.jpg);
+    background-position: bottom;
+    background-size: cover;
+    transition: all ease 1s;
+}
+.rtop1:hover{
+    scale: 1.2;
+    
+}
+.rtop2{
+    height: 100%;
+    width: 45%;
+    background-image: url(./assets/photo-1605986723344-f60873d873fa.avif);
+    background-position:center;
+    background-size: cover;
+    transition: all ease 1s;
+}
+.rtop2:hover{
+    scale: 1.2;
+}
+
+@media(max-width:500px){
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .main .left{
+        width: 100%;
+    }
+    .main .right{
+        width: 100%;
+    }
+    .text-center h1{
+        padding-top: 10px;
+        font-size: 70px;
+        font-weight: 600;
+    }
+    .text-center p{
+        opacity: .6;
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+}
